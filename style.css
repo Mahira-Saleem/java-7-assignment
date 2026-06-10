@@ -79,7 +79,7 @@ body {
             font-weight: 500;
         }
         
-        /* Golden button styling */
+        /* Golden button */
         .btn-gold {
             background-color: #F9C06A;
             color: #1c1310;
@@ -93,11 +93,12 @@ body {
         }
         
         .btn-gold:hover {
-            background-color: #e5b060;
+            background-color: #422c0a;
+            color: #F9C06A;
             transform: scale(1.02);
         }
         
-        /* --- 3. HERO CONTENT STYLING --- */
+        /*  HERO  STYLING */
         .hero-section {
             flex-grow: 1;
             display: flex;
@@ -156,7 +157,7 @@ body {
             font-weight: 700;
         }
         
-        /* --- 4. RESPONSIVE DESIGN (Mobile Phones ke liye) --- */
+
         @media (max-width: 768px) {
             .hero-wrapper {
                 height: auto;
@@ -203,7 +204,6 @@ body {
             }
         }
 
-/* Section ka background white ya light cream rakhein jaisa image mein hai */
 .about-section {
     background-color: #ffffff; 
 }
@@ -218,7 +218,7 @@ body {
     background-color: #fff;
 }
 
-/* Ab CSS selectors HTML ke mutabiq bilkul sahi kaam karenge */
+
 .material h2 {
     font-size: 38px;
     font-weight: bold;
@@ -227,7 +227,7 @@ body {
 }
 
 .material p {
-    width: 100%; /* Mobile par width auto rahegi, desktop par control karne ke liye max-width behtar hai */
+    width: 100%; 
     max-width: 700px; 
     line-height: 1.2em;
     margin-bottom: 25px;
@@ -235,7 +235,7 @@ body {
     color: rgba(74, 51, 37, 0.85);
 }
 
-/* Image ko layout ke hisab se resize karna */
+
 .image-bean {
    
     width: 420px;
@@ -244,4 +244,167 @@ body {
 .py-5 {
     padding-top: 80px !important;
     padding-bottom: 0 !important;
+}
+
+.cofee-falling {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto;
+    
+    
+}
+
+.about-section {
+    position: relative;
+}
+
+/* Left img fix */
+.about-section > img {
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    width: 350px;
+    z-index: 16;
+    pointer-events: none;
+}
+
+/* Right img */
+.coffee-falling {
+    position: absolute;
+    right: 0;
+    bottom: -320px;
+    width: 260px;
+    z-index: 5;
+    pointer-events: none;
+}
+
+
+/* --- 4 Cards Menu  --- */
+.menu-section {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.menu-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 49px;
+    font-weight: bold;
+    color: #4A3325;
+}
+
+.menu-subtitle {
+    font-size: 16px;
+    color: rgba(74, 51, 37, 0.7);
+}
+
+/* Card-Design */
+.coffee-card {
+    background-color: #FFF9F4;
+    border: 1px solid rgba(255, 192, 106, 0.25);
+    border-radius: 16px !important; 
+    height: 90%;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-holder img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+
+.card-info {
+    padding: 25px 15px;
+}
+
+.card-info h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #4A3325;
+    margin-bottom: 6px;
+}
+
+.card-info .recipe {
+    font-size: 13px;
+    color: rgba(74, 51, 37, 0.6);
+    margin-bottom: 8px;
+}
+
+.card-info .price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #4A3325;
+    margin-bottom: 18px;
+}
+
+/*Button */
+.btn-order {
+    background-color: #FFC06A;
+    color: #4A3325;
+    border: none;
+    padding: 8px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-order:hover {
+    background-color: #e5ab5f;
+}
+
+
+.different-section {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.diff-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 49px;
+    font-weight: bold;
+    color: #4A3325;
+}
+
+.diff-subtitle {
+    font-size: 18px;
+    color: rgba(74, 51, 37, 0.7);
+}
+
+.icon-holder img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.feature-item{
+    border: 6px double #7e5337;
+}
+
+.feature-item h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4A3325;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: rgba(74, 51, 37, 0.6);
+    max-width: 220px;
+    margin: 0 auto;
 }
