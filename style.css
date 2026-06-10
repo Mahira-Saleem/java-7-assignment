@@ -1,0 +1,240 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+:root {
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1400px;
+}
+
+body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* --- HERO WRAPPER: Background image ko 100vh par fixed karne ke liye --- */
+        .hero-wrapper {
+            background-image: url('images/coffee_image.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 5%;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .logo {
+            font-family: "Dancing Script", cursive !important;
+            font-size: 2.5rem;
+            color: #FFFBF0;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 251, 240, 0.75);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+        
+        .auth-group {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .btn-signin {
+            color: rgba(255, 251, 240, 0.75);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        
+        /* Golden button styling */
+        .btn-gold {
+            background-color: #F9C06A;
+            color: #1c1310;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s, transform 0.2s;
+            display: inline-block;
+        }
+        
+        .btn-gold:hover {
+            background-color: #e5b060;
+            transform: scale(1.02);
+        }
+        
+        /* --- 3. HERO CONTENT STYLING --- */
+        .hero-section {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            padding: 40px 5%;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .hero-content {
+            max-width: 580px;
+        }
+        
+        .intro-text {
+            font-size: 1.4rem;
+            color: #FFFBF0;
+            margin-bottom: 5px;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .main-title {
+            font-family: "Clicker Script", cursive !important;
+            letter-spacing: -2px;
+            font-size: 8.5rem;
+            font-weight: 400;
+            color: #FFFBF0;
+            margin: 0 0 10px 0;
+            line-height: 0.8;
+        }
+        
+        .description-text {
+            font-size: 0.95rem;
+            color: rgba(255, 251, 240, 0.75);
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-weight: 300;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .btn-order {
+            padding: 14px 36px;
+            font-size: 1rem;
+        }
+        
+        /* --- NEXT SECTION STYLING --- */
+        .material {
+            text-align: center;
+            color: #1c1310;
+            background-color: #FFFBF0;
+        }
+        .material h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        /* --- 4. RESPONSIVE DESIGN (Mobile Phones ke liye) --- */
+        @media (max-width: 768px) {
+            .hero-wrapper {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .header-nav {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .auth-group {
+                margin-top: 5px;
+            }
+            
+            .hero-section {
+                justify-content: center;
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 60px;
+            }
+            
+            .main-title {
+                font-size: 6rem;
+            }
+
+            .intro-text {
+                font-size: 1.1rem;
+            }
+        }
+
+/* Section ka background white ya light cream rakhein jaisa image mein hai */
+.about-section {
+    background-color: #ffffff; 
+}
+
+.material {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #4A3325;
+    text-align: left; 
+    background-color: #fff;
+}
+
+/* Ab CSS selectors HTML ke mutabiq bilkul sahi kaam karenge */
+.material h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.material p {
+    width: 100%; /* Mobile par width auto rahegi, desktop par control karne ke liye max-width behtar hai */
+    max-width: 700px; 
+    line-height: 1.2em;
+    margin-bottom: 25px;
+    font-size: 19px;
+    color: rgba(74, 51, 37, 0.85);
+}
+
+/* Image ko layout ke hisab se resize karna */
+.image-bean {
+   
+    width: 420px;
+}
+
+.py-5 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
