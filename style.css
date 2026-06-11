@@ -17,16 +17,16 @@ body {
             box-sizing: border-box;
         }
 
-        /* --- HERO WRAPPER: Background image ko 100vh par fixed karne ke liye --- */
-        .hero-wrapper {
-            background-image: url('images/coffee_image.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+       
+    .hero-wrapper {
+        background-image: url('images/coffee_image.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
         }
         
         .header-nav {
@@ -66,7 +66,7 @@ body {
             color: #ffffff;
         }
         
-        .auth-group {
+        .btn-group {
             display: flex;
             align-items: center;
             gap: 25px;
@@ -78,9 +78,15 @@ body {
             font-size: 0.95rem;
             font-weight: 500;
         }
+
+        .btn-signin:hover{
+            color: #ffffff;
+            font-size: 18px;
+            transition: 1s ease-in-out;
+            
+        }
         
-        /* Golden button */
-        .btn-gold {
+        .btn-up {
             background-color: #F9C06A;
             color: #1c1310;
             text-decoration: none;
@@ -92,9 +98,9 @@ body {
             display: inline-block;
         }
         
-        .btn-gold:hover {
-            background-color: #422c0a;
-            color: #F9C06A;
+        .btn-up:hover {
+            background-color: #583809;
+            color: #edac43;
             transform: scale(1.02);
         }
         
@@ -144,6 +150,27 @@ body {
         .btn-order {
             padding: 14px 36px;
             font-size: 1rem;
+            text-decoration: none;
+        }
+        .btn-order:hover{
+            color: #3b2314;
+            background-color: burlywood;
+        }
+        .ani:hover{
+            text-decoration: dotted;
+            animation: btn 3s ease-in-out infinite alternate;
+        }
+         
+        @keyframes btn {
+            from {
+                transform: translateX(0);
+                color: #7d5133;
+            }
+
+            to{
+                transform: translateX(80px);
+                color: #3b2314;
+            }
         }
         
         /* --- NEXT SECTION STYLING --- */
@@ -241,10 +268,6 @@ body {
     width: 420px;
 }
 
-.py-5 {
-    padding-top: 80px !important;
-    padding-bottom: 0 !important;
-}
 
 .cofee-falling {
     width: 100%;
@@ -258,6 +281,8 @@ body {
 .about-section {
     position: relative;
 }
+
+/* ye yhn se comment isliye karen hen q k apny js ke assignment me bola tha  */
 
 /* Left img fix */
 .about-section > img {
@@ -280,7 +305,7 @@ body {
 }
 
 
-/* --- 4 Cards Menu  --- */
+/* --- 4 Cards   --- */
 .menu-section {
     background-color: #ffffff;
     position: relative;
@@ -348,7 +373,9 @@ body {
     margin-bottom: 18px;
 }
 
+
 /*Button */
+
 .btn-order {
     background-color: #FFC06A;
     color: #4A3325;
@@ -369,9 +396,14 @@ body {
 .different-section {
     background-color: #ffffff;
     position: relative;
-    z-index: 10;
+    z-index: 60;
 }
 
+.left{
+   position: absolute;
+   right: 0px;
+   top: -80px;
+}
 .diff-title {
     font-family: 'Playfair Display', serif;
     font-size: 49px;
@@ -408,3 +440,427 @@ body {
     max-width: 220px;
     margin: 0 auto;
 }
+
+/* --- Amazing Morning with coffee  --- */
+.amazing-coffee-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background-color: #3b2314; 
+}
+
+.main-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+}
+
+.position-relative.z-2 {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Left Side --- */
+.text-white{
+    position: relative;
+    z-index: 4;
+}
+.banner-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 20px;
+    
+}
+
+.banner-subtext {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+    max-width: 420px;
+}
+
+.btn-gold-banner {
+    background-color: #FFC06A;
+    color: #4A3325;
+    border: none;
+    padding: 10px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.banner-visual-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 440px; }
+
+
+.layer-plate {
+    position: absolute;
+   width: 80em;
+   left: -640px;
+    height: auto;
+    z-index: 2; 
+}
+.layer-cup {
+    position: relative;
+    z-index: 5; 
+    max-height: 360px;
+    width: auto;
+}
+
+.layer-scattered-beans {
+    position: absolute;
+    width: 110%;
+    max-width: 540px;
+    height: auto;
+    right: -58px;
+    bottom: -48px;
+    z-index: 3; 
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .banner-heading {
+        font-size: 30px;
+    }
+    .banner-visual-container {
+        min-height: 320px;
+    }
+    .layer-cup {
+        max-height: 250px;
+    }
+    .layer-scattered-beans {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+.BIG-card-section {
+    position: relative;
+    background-color: #f8f5f5;
+    overflow: hidden;
+    width: 100%;
+}
+
+.splash-left-bottom {
+    position: absolute;
+    left: -40px;
+    bottom: -30px;
+    width: 320px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.splash-right-top {
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    width: 340px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.big-card-wrapper {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.bigcard-content-box {
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 192, 106, 0.35); 
+    padding: 60px 40px 0px 40px;
+    position: relative;
+}
+
+.quote-icon {
+    font-family: 'Playfair Display', serif;
+    font-size: 180px;
+    line-height: 1;
+    color: #4A3325;
+    text-align: left;
+    margin-top: -60px;
+    margin-bottom: 0px !important;
+    height: 50px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(74, 51, 37, 0.75);
+    text-align: center;
+    font-weight: 400;
+}
+
+.author-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #4A3325;
+}
+
+.author-title {
+    font-size: 14px;
+    color: rgba(74, 51, 37, 0.55);
+}
+
+.author-img-box {
+    width: 100px;
+    height: 110px;
+    border-radius: 8px;
+    margin-bottom: -50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.author-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #FFC06A;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #4A3325;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s, opacity 0.3s;
+    box-shadow: 0 4px 12px rgba(255, 192, 106, 0.3);
+}
+
+.slider-arrow:hover {
+    background-color: #e5ab5f;
+}
+
+.arrow-left {
+    left: -25px;
+}
+
+.arrow-right {
+    right: -25px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-content-box {
+        padding: 40px 20px 0px 20px;
+        margin: 0 15px;
+    }
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    .arrow-left {
+        left: -5px;
+    }
+    .arrow-right {
+        right: -5px;
+    }
+    .splash-left-bottom, .splash-right-top {
+        width: 180px; 
+    }
+}
+
+/* --- 6. Newsletter Overlay Frame CSS --- */
+.newsletter-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.position-relative.z-3 {
+    position: relative;
+    z-index: 3;
+}
+
+.subscribe-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.subscribe-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Custom Input Bar Frame Match */
+.subscribe-form {
+    max-width: 580px;
+    width: 100%;
+}
+
+.subscribe-form .form-control {
+    background-color: #ffffff !important;
+    border: none !important;
+    height: 52px;
+    font-size: 15px;
+    color: #4A3325 !important;
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.subscribe-form .form-control::placeholder {
+    color: rgba(74, 51, 37, 0.5);
+}
+
+.btn-subscribe {
+    background-color: #FFC06A !important;
+    color: #4A3325 !important;
+    font-weight: 600;
+    padding: 0 35px;
+    border: none;
+    font-size: 15px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+
+/* --- 7. Deep Brown Footer CSS --- */
+.main-footer {
+    background-image: linear-gradient(rgba(74, 51, 37, 0.96), rgba(74, 51, 37, 0.96)), url('images/Rectangle\ 14.png');
+    background-size: cover;
+    background-position: bottom center;
+    padding: 80px 0 60px 0;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.brand-text {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Footer Link Columns Heading Style */
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a,
+.footer-contact-info li a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links li a:hover,
+.footer-contact-info li a:hover {
+    color: #FFC06A;
+}
+
+.footer-contact-info li {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+
+.footer-socials a {
+    width: 34px;
+    height: 34px;
+    background-color: #ffffff;
+    color: #4A3325;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+    background-color: #FFC06A;
+    color: #4A3325;
+}
+
+@media (max-width: 768px) {
+    .subscribe-title {
+        font-size: 28px;
+    }
+    .main-footer {
+        padding: 50px 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #FFC06A; 
+    color: #4A3325;            
+    text-decoration: none;
+    border-radius: 50%;       
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 115;       
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #4A3325;
+    color: #FFC06A;
+    transform: translateY(-5px);
+}
+
